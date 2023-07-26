@@ -53,13 +53,8 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-<!--
-Example command:
-
-```sh
-  sudo apt install ruby-full
-```
- -->
+- Install Git on your computer following the steps [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- Install node js following the steps [here](https://www.pluralsight.com/guides/getting-started-with-nodejs)
 
 ### Setup
 
@@ -82,32 +77,29 @@ Example command:
 
 ```sh
   cd blog-app
-  bundle install
+  npm install
 ```
 
 ### Usage
 
 To run the project, execute the following command:
 
-```sh
-  ruby main.rb
+```jsx
+  npm start /* to Start the development server */
 ```
-
-### Deployment
-
-This App has not been deployed
 
 ### Run tests
 
 To run tests, run the following command:
 
-```sh
-  rspec spec
+```js
+  npx hint . /* check html linters */
+  npx stylelint "\*_/_.{css,scss}" /* check css/sass linters */
 ```
 
-```sh
-  bin/rails test test/models/article_test.rb
-```
+### Deployment
+
+This App has not been deployed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
