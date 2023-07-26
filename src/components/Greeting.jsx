@@ -3,7 +3,7 @@ import { fetchGreeting } from '../feature/greetingSlice';
 import { useSelector, useDispatch } from 'react-redux';
 
 const Greeting = () => {
-  const { greeting, isLoading } = useSelector((store) => store.greetings);
+  const { greeting } = useSelector((store) => store.greetings);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -14,9 +14,9 @@ const Greeting = () => {
     dispatch(fetchGreeting());
   };
 
-  return isLoading ? (
-    <p>Loading...</p>
-  ) : (
+  console.log(greeting);
+
+  return (
     <div>
       <h1>{greeting.greeting}</h1> <br />
       <button onClick={handler}>Fetch a greeting</button>
